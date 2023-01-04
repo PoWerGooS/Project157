@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
 
     <script src="js/Tour.js"></script>
+    <script src="js/CursorEvents.js"></script>
   </head>
   <body>
     <a-scene id="main-scene">
@@ -15,7 +16,7 @@
       <a-sky id="main-container" radius="5000" color="#98DAFC"></a-sky>
 
       <!-- Places Container -->
-      <a-entity id="places-container" tour></a-entity>
+      <a-entity id="places-container" tour cursor-listener></a-entity>
 
       <!-- CAMERA -->
       <a-camera id="camera" wasd-controls="enabled:false;">
@@ -30,11 +31,20 @@
             position="0 -0.1 0"
             text="font: dejavu; align: center; width: 1; color: #0F184E; value: Superhero Comics"
           ></a-entity>
+          
         </a-entity>
-
+        <a-entity
+          id="camera-cursor"
+          cursor
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: #fff; shader: flat"
+        >
+        </a-entity>
         <!--Background-->
         <a-entity> </a-entity>
       </a-camera>
     </a-scene>
   </body>
 </html>
+
