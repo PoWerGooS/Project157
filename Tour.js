@@ -63,6 +63,7 @@ AFRAME.registerComponent("tour", {
       color: "#0077CC",
       opacity: 1,
     });
+    entityEl.setAttribute("cursor-listener", {});
 
     return entityEl;
   },
@@ -96,3 +97,4 @@ AFRAME.registerComponent("tour", {
 
 
 });
+
